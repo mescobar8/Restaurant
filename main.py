@@ -5,7 +5,7 @@ from PIL import Image, ImageTk
 
 root  = Tk()
 
-root.title("TTC - Binary Restaurant")
+root.title("Pizza restaurant")
 
 # ------------------------------------FUNCTIONS--------------------------------------------- #
 
@@ -42,44 +42,40 @@ s.configure('orderTransaction.TLabel',
             padding = (3, 3, 3, 3)
             )
 
-# endregion
-
-# region Images
 # Top Banner images
-LogoImageObject = Image.open("Images/Binary Logo.png").resize((130, 130))
+LogoImageObject = Image.open("Images/Logo.png").resize((130, 130))
 LogoImage = ImageTk.PhotoImage(LogoImageObject)
 
-TopBannerImageObject = Image.open("Images/restaurant top banner.jpg").resize((800, 130))
+TopBannerImageObject = Image.open("Images/TopBanner.jpg").resize((800, 130))
 TopBannerImage = ImageTk.PhotoImage(TopBannerImageObject)
 
 # Menu images
 displayDefaultImageObject = Image.open("Images/display - Default.png").resize((350,360))
 displayDefaultImage = ImageTk.PhotoImage(displayDefaultImageObject)
 
-calamariImageObject = Image.open("Images/menu/fried calamari.png").resize((350,334))
-calamariImage = ImageTk.PhotoImage(calamariImageObject)
+CheesePizzaImageObject = Image.open("Images/menu/cheese pizza.png").resize((350,334))
+cheesepizzaiImage = ImageTk.PhotoImage(CheesePizzaImageObject)
 
-burgerImageObject = Image.open("Images/menu/beach burger.png").resize((350,334))
-burgerImage = ImageTk.PhotoImage(burgerImageObject)
+PepperoniPizaaImageObject = Image.open("Images/menu/pepperoni pizza.png").resize((350,334))
+pepperonipizzaImage = ImageTk.PhotoImage(PepperoniPizaaImageObject)
 
-salmonImageObject = Image.open("Images/menu/salmon wild rice.png").resize((350,334))
-salmonImage = ImageTk.PhotoImage(salmonImageObject)
+ChickenPizzaImageObject = Image.open("Images/menu/chicken pizza.png").resize((350,334))
+chickenpizzaImage = ImageTk.PhotoImage(ChickenPizzaImageObject)
 
-shrimpImageObject = Image.open("Images/menu/shrimp tacos.png").resize((350,334))
-shrimpImage = ImageTk.PhotoImage(shrimpImageObject)
+SupremePizzaImageObject = Image.open("Images/menu/supreme pizza.png").resize((350,334))
+supremeImage = ImageTk.PhotoImage(SupremePizzaImageObject)
 
-sushiImageObject = Image.open("Images/menu/sushi platter.png").resize((350,334))
-sushiImage = ImageTk.PhotoImage(sushiImageObject)
+CheeseSticksImageObject = Image.open("Images/menu/cheese sticks.png").resize((350,334))
+cheesesticksImage = ImageTk.PhotoImage(CheeseSticksImageObject)
 
-empanadasImageObject = Image.open("Images/menu/empanadas.png").resize((350,334))
-empanadasImage = ImageTk.PhotoImage(empanadasImageObject)
+SodaImageObject = Image.open("Images/menu/Soda.png").resize((350,334))
+sodaImage = ImageTk.PhotoImage(SodaImageObject)
 
 
 #endregion
 
 #----------------------------------- WIDGETS ----------------------------------------------- #
 
-# region Frames
 
 # Section Frames
 mainFrame = ttk.Frame(root, width = 800, height = 580, style = 'MainFrame.TFrame')
@@ -98,23 +94,23 @@ orderFrame = ttk.Frame(mainFrame, style = "OrderFrame.TFrame")
 orderFrame.grid(row = 1, column = 2, padx = 3, pady = 3, sticky = "NSEW")
 
 # Dish Frames
-calamariDishFrame = ttk.Frame(menuFrame, style = "DishFrame.TFrame")
-calamariDishFrame.grid(row = 1, column = 0, sticky = "NSEW")
+cheesepizzaFrame = ttk.Frame(menuFrame, style = "DishFrame.TFrame")
+cheesepizzaFrame.grid(row = 1, column = 0, sticky = "NSEW")
 
-burgerDishFrame = ttk.Frame(menuFrame,style ="DishFrame.TFrame")
-burgerDishFrame.grid(row = 2, column = 0, sticky ="NSEW")
+peperonipizzaFrame = ttk.Frame(menuFrame,style ="DishFrame.TFrame")
+peperonipizzaFrame.grid(row = 2, column = 0, sticky ="NSEW")
 
-salmonDishFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
-salmonDishFrame.grid(row = 3, column = 0, sticky ="NSEW")
+chickenpizzaFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
+chickenpizzaFrame.grid(row = 3, column = 0, sticky ="NSEW")
 
-shrimpDishFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
-shrimpDishFrame.grid(row = 4, column = 0, sticky ="NSEW")
+supremepizzaFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
+supremepizzaFrame.grid(row = 4, column = 0, sticky ="NSEW")
 
-sushiDishFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
-sushiDishFrame.grid(row = 5, column = 0, sticky ="NSEW")
+cheesesticksFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
+cheesesticksFrame.grid(row = 5, column = 0, sticky ="NSEW")
 
-empanadasDishFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
-empanadasDishFrame.grid(row = 6, column = 0, sticky ="NSEW")
+sodaFrame = ttk.Frame(menuFrame, style ="DishFrame.TFrame")
+sodaFrame.grid(row = 6, column = 0, sticky ="NSEW")
 
 #endregion
 
@@ -136,42 +132,42 @@ MainMenuLabel.configure(
     font = ("Helvetica", 14, "bold")
 )
 
-CalamariDishLabel = ttk.Label(calamariDishFrame, text ="Fried Calamari ..... 10$", style ="MenuLabel.TLabel")
-CalamariDishLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
+CheesePizzaLabel = ttk.Label(cheesepizzaFrame, text ="Cheese Pizza ..... 10$", style ="MenuLabel.TLabel")
+CheesePizzaLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
 
-BurgerDishLabel = ttk.Label(burgerDishFrame, text ="Beach Burger ..... 14$", style ="MenuLabel.TLabel")
-BurgerDishLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
+PeperonniPizzaLabel = ttk.Label(peperonipizzaFrame, text ="Pepperoni Pizza ..... 12$", style ="MenuLabel.TLabel")
+PeperonniPizzaLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
 
-SalmonDishLabel = ttk.Label(salmonDishFrame, text ="Salmon Wonder ..... 23$", style ="MenuLabel.TLabel")
-SalmonDishLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
+ChickenPizzaLabel = ttk.Label(chickenpizzaFrame, text ="chicken Pizza ..... 15$", style ="MenuLabel.TLabel")
+ChickenPizzaLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
 
-ShrimpDishLabel = ttk.Label(shrimpDishFrame, text ="Shrimp Tacos ..... 15$", style ="MenuLabel.TLabel")
-ShrimpDishLabel.grid(row = 0, column = 0, padx =10, pady = 10, sticky = "W")
+SupremePizzaLabel = ttk.Label(supremepizzaFrame, text ="Supreme Pizza ..... 18$", style ="MenuLabel.TLabel")
+SupremePizzaLabel.grid(row = 0, column = 0, padx =10, pady = 10, sticky = "W")
 
-SushiDishLabel = ttk.Label(sushiDishFrame, text ="Sushi Platter ..... 25$", style ="MenuLabel.TLabel")
-SushiDishLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
+CheeseSticksLabel = ttk.Label(cheesesticksFrame, text ="Cheese Sticks ..... 8$", style ="MenuLabel.TLabel")
+CheeseSticksLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
 
-EmpanadasDishLabel = ttk.Label(empanadasDishFrame, text ="Empanadas .... 10$", style ="MenuLabel.TLabel")
-EmpanadasDishLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
+SodaLabel = ttk.Label(sodaFrame, text ="Soda .... 3$", style ="MenuLabel.TLabel")
+SodaLabel.grid(row = 0, column = 0, padx = 10, pady = 10, sticky = "W")
 
 #Buttons
-CalamariDisplayButton = ttk.Button(calamariDishFrame, text ="Display")
-CalamariDisplayButton.grid(row = 0, column = 1, padx = 10)
+CheesePizzaButton = ttk.Button(cheesepizzaFrame, text ="Display")
+CheesePizzaButton.grid(row = 0, column = 1, padx = 10)
 
-BurgerDisplayButton = ttk.Button(burgerDishFrame, text ="Display")
-BurgerDisplayButton.grid(row = 0, column = 1, padx = 10)
+PepperoniPizzaButton = ttk.Button(peperonipizzaFrame, text ="Display")
+PepperoniPizzaButton.grid(row = 0, column = 1, padx = 10)
 
-SalmonDisplayButton = ttk.Button(salmonDishFrame, text ="Display")
-SalmonDisplayButton.grid(row = 0, column = 1, padx = 10)
+ChickenPizzaButton = ttk.Button(chickenpizzaFrame, text ="Display")
+ChickenPizzaButton.grid(row = 0, column = 1, padx = 10)
 
-ShrimpDisplayButton = ttk.Button(shrimpDishFrame, text ="Display")
-ShrimpDisplayButton.grid(row = 0, column = 1, padx = 10)
+SupremePizzaButton = ttk.Button(supremepizzaFrame, text ="Display")
+SupremePizzaButton.grid(row = 0, column = 1, padx = 10)
 
-SushiDisplayButton = ttk.Button(sushiDishFrame, text ="Display")
-SushiDisplayButton.grid(row = 0, column = 1, padx = 10)
+CheeseSticksButton = ttk.Button(cheesesticksFrame, text ="Display")
+CheeseSticksButton.grid(row = 0, column = 1, padx = 10)
 
-EmpanadasDisplayButton = ttk.Button(empanadasDishFrame, text ="Display")
-EmpanadasDisplayButton.grid(row = 0, column = 1, padx = 10)
+SodaButton = ttk.Button(sodaFrame, text ="Display")
+SodaButton.grid(row = 0, column = 1, padx = 10)
 
 # endregion
 
